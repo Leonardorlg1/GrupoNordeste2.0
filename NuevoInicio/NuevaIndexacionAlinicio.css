@@ -1,0 +1,112 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #004080;
+
+}
+
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.contenedor-cuadros {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.contenedor-centro {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.contenedor-centro .cuadro {
+  width: 48%;
+}
+
+.cuadro {
+  width: 48%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+.cuadro img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corrección específica para imagen del carrito */
+.contenedor-centro .cuadro img {
+  max-height: 300px;
+  object-fit: contain;
+  margin: 20px auto;
+}
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 2px solid #007b8f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 60px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #007b8f;
+  font-weight:  bold;
+  font-size: 16px;
+}
+
+.boton-contacto {
+  background-color: #007b8f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+  background-color: #005f73;
+}
