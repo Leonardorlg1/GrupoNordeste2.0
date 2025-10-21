@@ -110,3 +110,10 @@ p {
 .boton-contacto:hover {
   background-color: #005f73;
 }
+
+.fondo {
+  background-image: url('IMAGENES/home.png'); /* o solo 'home.png' si está en la misma carpeta */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
