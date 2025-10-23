@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Organigrama Institucional</title>
+  <title>ORGANIGRAMA GRUPO NORDETE</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -71,6 +71,8 @@
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
+   
+
   </style>
 </head>
 <body>
@@ -80,26 +82,32 @@
       Nuestra organización está conformada por un equipo multidisciplinario comprometido con la excelencia, la transparencia y el cumplimiento de los estándares institucionales. Cada integrante aporta su experiencia para fortalecer la cultura organizacional y garantizar resultados trazables y sostenibles.
     </p>
   </div>
-
-  <!-- Botones por área -->
-<div class="boton-area" onclick="mostrar('gerente')">Gerente</div>
-<div class="boton-area" onclick="mostrar('auditoria')">Auditoría</div>
-<div class="boton-area" onclick="mostrar('contabilidad')">Contabilidad</div>
-<div class="boton-area" onclick="mostrar('operaciones')">Operaciones</div>
-<div class="boton-area" onclick="mostrar('administracion')">Administracion</div>
-
+   <!--Boton destacado grupo Nordeste-->
+ <div class="boton-area boton-gerente" onclick="mostrar('gerente')">Gerente</div>
+</div>
+<div class="separador"></div>
+</div>
 <!-- Tarjetas por área -->
 <div id="gerente" class="tarjeta-area">
   <img src="IMAGENES/GERENTE.png" alt="Gerente General">
   <div class="cargo">Gerente General</div>
-  <div class="nombre">Lic. Marinez Canga Federico</div>
+  <div class="nombre">Lic. Martinez Canga Federico</div>
   <p>Responsable de la dirección estratégica y supervisión general de la organización.</p>
 </div>
+  <!-- Botones por área -->
+   <div class="botones-secundarios">
+<div class="boton-area" onclick="mostrar('auditoria')">Auditoría</div>
+<div class="boton-area" onclick="mostrar('contabilidad')">Contabilidad</div>
+<div class="boton-area" onclick="mostrar('operaciones')">Operaciones</div>
+<div class="boton-area" onclick="mostrar('administracion')">Administracion</div>
+</div>
+
+
 
 <div id="contabilidad" class="tarjeta-area">
   <img src="IMAGENES/CONTABILIDAD.png" alt="Contadora">
   <div class="cargo">Contadora</div>
-  <div class="nombre">Lic. Novak Adrian</div>
+  <div class="nombre">Lic. Novak Adriana</div>
   <p>Registro, control y análisis de las finanzas para asegurar la transparencia, el cumplimiento normativo y la salud económica de la organización</p>
 </div>
 
@@ -127,12 +135,21 @@
 
   </div>
   <script>
-    function mostrar(id) {
-      const tarjetas = document.querySelectorAll('.tarjeta-area');
-      tarjetas.forEach(t => t.classList.remove('visible'));
-      document.getElementById(id).classList.add('visible');
+  function mostrar(id) {
+    const tarjeta = document.getElementById(id);
+    const todas = document.querySelectorAll('.tarjeta-area');
+
+    // Si la tarjeta ya está visible, la ocultamos
+    if (tarjeta.classList.contains('visible')) {
+      tarjeta.classList.remove('visible');
+    } else {
+      // Ocultamos todas las demás
+      todas.forEach(t => t.classList.remove('visible'));
+      // Mostramos la seleccionada
+      tarjeta.classList.add('visible');
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>

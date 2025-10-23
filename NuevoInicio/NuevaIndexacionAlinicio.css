@@ -14,15 +14,14 @@ h1, h2 {
     font-weight: bold;
     margin-top: 20px;
     color: #004080;
-
 }
-
 p {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
     line-height: 1.6;
     text-align: justify;
+    color: aliceblue;
 }
 .contenedor-cuadros {
   display: flex;
@@ -33,14 +32,12 @@ p {
   gap: 20px;
   padding: 0 20px;
 }
-
 .contenedor-centro {
   display: flex;
   justify-content: center;
   margin: 20px auto;
   padding: 0 20px;
 }
-
 .contenedor-centro .cuadro {
   width: 48%;
 }
@@ -116,4 +113,60 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+/* Botón para ver el organigrama */
+.boton-organigrama button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.boton-organigrama button:hover {
+  background-color: #0056b3;
+}
+
+.* Botón destacado del Gerente */
+.boton-gerente {
+  background-color: #d4af37;
+  color: black;
+  border: 2px solid #b8860b;
+  font-size: 1.3em;
+  padding: 14px 28px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  text-transform: uppercase;
+}
+
+/* Organización jerárquica de botones */
+.grupo-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  gap: 30px;
+}
+
+.botones-secundarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boton-area {
+  background-color: #004080;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.boton-area:hover {
+  background-color: #0066cc;
 }
