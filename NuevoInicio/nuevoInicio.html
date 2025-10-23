@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO INTEGRACION</title>
     <link rel="stylesheet" href="nuevaIndexacionAlinicio.css">
-    <a href="Organigrama.html" target="_blank">
-  
+
+
 
 </head>
 <header class="encabezado">
   <div class="logo">
-    <img src="IMAGENES/logo.png" alt="Logo Grupo Nordeste">
-  </div>
-  <div class="boton-organigrama">
     <a href="Organigrama.html" target="_blank">
-      <button>ORGANIGRAMA GRUPO NORDESTE</button>
+      <img src="IMAGENES/logo.png" alt="Logo Grupo Nordeste">
     </a>
-
-
+  </div>
+  <span>BIENVENIDOS A GRUPO NORDESTE SRL</span>
+  <div class="boton-organigrama">
+    <a href="#organigrama">
+      <button>ORGANIGRAMA</button>
+    </a>
+  </div>
 </header>
+
 
 <body>
   <body class="fondo">
-
-    <h1> BIENVENIDOS A GRUPO NORDESTE SRL</h1>
     <H2> Proyecto integrador</H2>
 
       <p>
@@ -33,8 +34,34 @@
         Se trabajará en equipo para desarrollar soluciones que aporten valor a la organización.
     </p>
 
+ <!-- 🔽 FORMULARIO DE CARGA DE CLIENTES (OCULTO) -->
+<section class="formulario-clientes"> OCULTOS
+
+  <h3>Carga de datos del cliente</h3>
+  <form action="guardar_cliente.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" required><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" name="dni" id="dni" required><br>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion"><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" name="telefono" id="telefono"><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" id="email"><br>
+
+    <button type="submit">Guardar cliente</button>
+  </form>
+</section>
+
+
+
+   <!-- Cuadro Reclamos -->
 <div class="contenedor-cuadros">
-  <!-- Cuadro Reclamos -->
   <div class="cuadro">
     <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
       <img src="IMAGENES/RECLAMOS.png" alt="Acceso al formulario de reclamos">
