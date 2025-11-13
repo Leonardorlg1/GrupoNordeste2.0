@@ -1,99 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROYECTO INTEGRACION</title>
-    <link rel="stylesheet" href="nuevaIndexacionAlinicio.css">
-
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROYECTO INTEGRACION</title>
+  <link rel="stylesheet" href="nuevaIndexacionAlinicio.css" />
 </head>
-<header class="encabezado">
-  <div class="logo">
-    <a href="Organigrama.html" target="_blank">
-      <img src="IMAGENES/logo.png" alt="Logo Grupo Nordeste">
-    </a>
+
+<body class="fondo">
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <div class="logo">
+      <a href="Organigrama.html" target="_blank">
+        <img src="IMAGENES/logo.png" alt="Logo Grupo Nordeste" />
+      </a>
+    </div>
+    <span>BIENVENIDOS A GRUPO NORDESTE SRL</span>
+    <div class="boton-organigrama">
+      <a href="#organigrama">
+        <button>ORGANIGRAMA</button>
+      </a>
+    </div>
+  </header>
+<!-- Texto institucional -->
+  <p>
+    Este proyecto tiene como objetivo integrar conocimientos adquiridos en distintas áreas,
+    aplicando estándares de calidad y buenas prácticas institucionales.
+    Se trabajará en equipo para desarrollar soluciones que aporten valor a la organización.
+  </p>
+  <h2>COMUNICATE CON NOSOTROS</h2>
+
+  <!-- Formulario de clientes -->
+  <section class="formulario-clientes">
+    <h3>Carga de datos del cliente</h3>
+    <form action="guardar_cliente.php" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" required><br>
+
+      <label for="dni">DNI:</label>
+      <input type="text" name="dni" id="dni" required><br>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" name="direccion" id="direccion"><br>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" name="telefono" id="telefono"><br>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" name="email" id="email"><br>
+ <button type="submit">Guardar cliente</button>
+    </form>
+  </section>
+
+  <!-- Cuadro Reclamos -->
+  <div class="contenedor-cuadros">
+    <div class="cuadro">
+      <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
+        <img src="IMAGENES/RECLAMOS.png" alt="Acceso al formulario de reclamos">
+      </a>
+    </div>
+
+    <!-- Cuadro Cotizaciones -->
+    <div class="cuadro">
+      <a href="https://wa.me/3764387339" target="_blank">
+        <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
+      </a>
+    </div>
   </div>
-  <span>BIENVENIDOS A GRUPO NORDESTE SRL</span>
-  <div class="boton-organigrama">
-    <a href="#organigrama">
-      <button>ORGANIGRAMA</button>
-    </a>
-  </div>
-</header>
-
-
-<body>
-  <body class="fondo">
-    <H2> Proyecto integrador</H2>
-
-      <p>
-        Este proyecto tiene como objetivo integrar conocimientos adquiridos en distintas áreas, 
-        aplicando estándares de calidad y buenas prácticas institucionales. 
-        Se trabajará en equipo para desarrollar soluciones que aporten valor a la organización.
-    </p>
-
- <!-- 🔽 FORMULARIO DE CARGA DE CLIENTES (OCULTO) -->
-<section class="formulario-clientes">
-  <h3>Carga de datos del cliente</h3>
-  <form action="guardar_cliente.php" method="POST">
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" required><br>
-
-    <label for="dni">DNI:</label>
-    <input type="text" name="dni" id="dni" required><br>
-
-    <label for="direccion">Dirección:</label>
-    <input type="text" name="direccion" id="direccion"><br>
-
-    <label for="telefono">Teléfono:</label>
-    <input type="text" name="telefono" id="telefono"><br>
-
-    <label for="email">Correo electrónico:</label>
-    <input type="email" name="email" id="email"><br>
-
-    <button type="submit">Guardar cliente</button>
-  </form>
-</section>
-<
-   <!-- Cuadro Reclamos -->
-<div class="contenedor-cuadros">
-  <div class="cuadro">
-    <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
-      <img src="IMAGENES/RECLAMOS.png" alt="Acceso al formulario de reclamos">
-    </a>
-  </div>
-
-  <!-- Cuadro Cotizaciones -->
-  <div class="cuadro">
-    <a href="https://wa.me/3764387339" target="_blank">
-      <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
-    </a>
-  </div>
-</div>
-
 <!-- Cuadro Carrito -->
-<div class="contenedor-centro">
-  <div class="cuadro">
-    <a href="https://www.gruponordeste.com.ar/" target="_blank">
-      <img src="IMAGENES/CARRITO.png" alt="Acceso al sitio institucional">
-    </a>
+  <div class="contenedor-centro">
+    <div class="cuadro">
+      <a href="https://www.gruponordeste.com.ar/" target="_blank">
+        <img src="IMAGENES/CARRITO.png" alt="Acceso al sitio institucional">
+      </a>
+    </div>
   </div>
-</div>
 
-<section id="organigrama" class="seccion-organigrama">
-  <div class="contenedor-gerente">
-    <div class="cuadro-gerente">Gerente</div>
-  </div>
-</section>
+  <!-- ORGANIGRAMA INTERACTIVO -->
+  <section id="organigrama" class="seccion-organigrama">
+    <h2>ORGANIGRAMA</h2>
 
+    <!-- Nodo principal: Gerente -->
+    <div class="contenedor-gerente">
+      <button class="cuadro-gerente" onclick="mostrarTarjeta()">Gerente</button>
+    </div>
 
-  </div>
-</section>
+    <!-- Tarjeta oculta -->
+    <div id="tarjetaGerente" class="tarjeta-gerente">
+      <h3>Juan Pérez</h3>
+      <p><strong>Cargo:</strong> Gerente General</p>
+      <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
+      <p><strong>Contacto:</strong> juan.perez@gruponordeste.com</p>
+    </div>
+ <!-- Nivel inferior -->
+    <div class="linea-conexion"></div>
+    <div class="nivel">
+      <div class="persona">Ventas</div>
+      <div class="persona">Operaciones</div>
+      <div class="persona">Administración</div>
+    </div>
+  </section>
 
+  <!-- Scripts -->
+  <script>
+  function mostrarTarjeta() {
+    const tarjeta = document.getElementById("tarjetaGerente");
+    const estaVisible = tarjeta.style.display === "block";
 
+    tarjeta.style.display = estaVisible ? "none" : "block";
 
+    if (!estaVisible) {
+      tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  }
+}
+</script>
 
 </body>
 </html>
