@@ -18,7 +18,8 @@
     <span>BIENVENIDOS A GRUPO NORDESTE SRL</span>
     <div class="boton-organigrama">
       <a href="#organigrama">
-        <button>ORGANIGRAMA</button>
+        <button aria-label="Ir al organigrama institucional">ORGANIGRAMA</button>
+
       </a>
     </div>
   </header>
@@ -31,33 +32,12 @@
   </p>
   <h2>COMUNICATE CON NOSOTROS</h2>
 
-  <!-- Formulario de clientes -->
-  <section class="formulario-clientes">
-    <h3>Carga de datos del cliente</h3>
-    <form action="guardar_cliente.php" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" name="nombre" id="nombre" required><br>
-
-      <label for="dni">DNI:</label>
-      <input type="text" name="dni" id="dni" required><br>
-
-      <label for="direccion">Dirección:</label>
-      <input type="text" name="direccion" id="direccion"><br>
-
-      <label for="telefono">Teléfono:</label>
-      <input type="text" name="telefono" id="telefono"><br>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" name="email" id="email"><br>
-
-      <button type="submit">Guardar cliente</button>
-    </form>
-  </section>
+ 
 <!-- Cuadro Reclamos -->
   <div class="contenedor-cuadros">
     <div class="cuadro">
       <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
-        <img src="IMAGENES/RECLAMOS.png" alt="Acceso al formulario de reclamos">
+        <img src="IMAGENES/RECLAMOS.png" alt="Formulario de reclamos institucional en Office Forms">
       </a>
     </div>
 
@@ -83,11 +63,11 @@
     <h2>ORGANIGRAMA</h2>
 <!-- Nodo principal: Gerente -->
     <div class="contenedor-gerente">
-      <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')">Gerente</button>
+      <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')" aria-expanded="false" role="button">Gerente</button>
     </div>
 
     <!-- Tarjeta oculta: Gerente -->
-    <div id="tarjetaGerente" class="tarjeta-gerente" style="display:none;">
+    <div id="tarjetaGerente" class="tarjeta-gerente">
       <h3>MARTNEZ CANGA FEDERICO</h3>
       <p><strong>Cargo:</strong> Gerente General</p>
       <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
@@ -103,7 +83,7 @@
     </div>
 
 <!-- Tarjeta oculta: Ventas -->
-    <div id="tarjetaVentas" class="tarjeta-gerente" style="display:none;">
+    <div id="tarjetaVentas" class="tarjeta-Ventas">
       <h3>Lagano Alejandro</h3>
       <p><strong>Cargo:</strong> Jefe de Ventas</p>
       <p><strong>Funciones:</strong> Gestión comercial, atención a clientes, seguimiento de cotizaciones.</p>
@@ -111,7 +91,7 @@
     </div>
 
     <!-- Tarjeta oculta: Operaciones -->
-    <div id="tarjetaOperaciones" class="tarjeta-gerente" style="display:none;">
+    <div id="tarjetaOperaciones" class="tarjeta-Operaciones">
       <h3>Gómez Natalia</h3>
       <p><strong>Cargo:</strong> Jefa de Operaciones</p>
       <p><strong>Funciones:</strong> Coordinación logística, control de procesos, supervisión operativa.</p>
@@ -126,18 +106,19 @@
       <p><strong>Contacto:</strong> administracion@gruponordeste.com.ar</p>
     </div>
   </section>
-<!-- Script único para todas las tarjetas -->
-  <script>
-    function mostrarTarjeta(idTarjeta) {
-      const tarjeta = document.getElementById(idTarjeta);
-      const estaVisible = tarjeta.style.display === "block";
+<script>
+function mostrarTarjeta(idTarjeta) {
+  const tarjeta = document.getElementById(idTarjeta);
+  const estaVisible = tarjeta.classList.contains("visible");
 
-      tarjeta.style.display = estaVisible ? "none" : "block";
+  if (estaVisible) {
+    tarjeta.classList.remove("visible");
+  } else {
+    tarjeta.classList.add("visible");
+    tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+</script>
 
-      if (!estaVisible) {
-        tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  </script>
 </body>
 </html>

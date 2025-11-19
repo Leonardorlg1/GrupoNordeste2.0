@@ -1,79 +1,48 @@
+/* =================== VARIABLES INSTITUCIONALES =================== */
+:root {
+  --color-primario: #007b8f;
+  --color-secundario: #004080;
+  --color-acento: #d4af37;
+  --color-fondo: #f4f4f4;
+  --color-texto: grey;
+  --color-titulo: #004080;
+  --color-boton-hover: #005f73;
+}
 
-
+/* =================== ESTILO GENERAL =================== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: grey;
-    font-size: 25px;
-
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-size: 25px;
 }
-
 h2 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #004080;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--color-titulo);
 }
+
 p {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    text-align: justify;
-    color:black;
-}
-.contenedor-cuadros {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  max-width: 1000px;
-  margin: 40px auto;
-  gap: 20px;
-  padding: 0 20px;
-}
-.contenedor-centro {
-  display: flex;
-  justify-content: center;
+  max-width: 800px;
   margin: 20px auto;
   padding: 0 20px;
-}
-.contenedor-centro .cuadro {
-  width: 48%;
-}
-
-.cuadro {
-  width: 48%;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  margin: 0 auto;
-}
-.cuadro img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+  line-height: 1.6;
+  text-align: justify;
+  color: black;
 }
 
-/* Corrección específica para imagen del carrito */
-.contenedor-centro .cuadro img {
-  max-height: 300px;
-  object-fit: contain;
-  margin: 20px auto;
-}
+/* =================== ENCABEZADO =================== */
 .encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   padding: 20px 40px;
-  border-bottom: 2px solid #007b8f;
+  border-bottom: 2px solid var(--color-primario);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -81,42 +50,7 @@ p {
   height: 60px;
 }
 
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #007b8f;
-  font-weight:  bold;
-  font-size: 16px;
-}
-
-.boton-contacto {
-  background-color: #007b8f;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.boton-contacto:hover {
-  background-color: #005f73;
-}
-
-.fondo {
-  background-image: url('IMAGENES/home.png'); /* o solo 'home.png' si está en la misma carpeta */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-/* Botón para ver el organigrama */
+/* =================== BOTÓN ORGANIGRAMA =================== */
 .boton-organigrama button {
   background-color: #007BFF;
   color: white;
@@ -127,54 +61,81 @@ p {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
+
 .boton-organigrama button:hover {
   background-color: #0f00b3;
 }
 
-.* Botón destacado del Gerente */
-.boton-gerente {
-  background-color: #d4af37;
-  color: black;
-  border: 2px solid #b8860b;
-  font-size: 1.3em;
-  padding: 14px 28px;
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
-  text-transform: uppercase;
-}
-
-/* Organización jerárquica de botones */
-.grupo-botones {
+/* =================== CONTENEDORES DE CUADROS =================== */
+.contenedor-cuadros {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1000px;
   margin: 40px auto;
-  gap: 30px;
-}
-
-.botones-secundarios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  padding: 0 20px;
+}
+contenedor-centro {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-.boton-area {
-  background-color: #004080;
-  color: white;
-  font-weight: bold;
-  padding: 12px 24px;
+.contenedor-centro .cuadro {
+  width: 48%;
+}
+
+/* =================== CUADROS =================== */
+.cuadro {
+  width: 48%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.cuadro img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+/* Imagen del carrito */
+.contenedor-centro .cuadro img {
+  max-height: 300px;
+  object-fit: contain;
+  margin: 20px auto;
+}
+
+/* =================== BOTONES INSTITUCIONALES =================== */
+.boton-contacto {
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: 10px 20px;
   border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
 }
 
-.boton-area:hover {
-  background-color: #0066cc;
+.boton-contacto:hover {
+  background-color: var(--color-boton-hover);
 }
-.formulario-clientes {
-  display: none;
+
+/* =================== FONDO =================== */
+.fondo {
+  background-image: url('IMAGENES/home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+/* =================== ORGANIGRAMA =================== */
 .seccion-organigrama {
   text-align: center;
   padding: 40px;
@@ -193,17 +154,30 @@ p {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin: 0 auto;
 }
+
 .tarjeta-gerente {
-  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: idden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   background-color: white;
   border: 2px solid #0077cc;
   border-radius: 10px;
   padding: 20px;
-  width: 300px;
+  width: 600px;
   margin: 20px auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  text-align: left;
+  text-align: center;
+  position: relative;
 }
+.visible {
+  opacity: 2;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
 
 .tarjeta-gerente button {
   margin-top: 10px;
@@ -215,19 +189,26 @@ p {
   cursor: pointer;
 }
 
+/* Clase para mostrar tarjetas */
+.visible {
+  display: block;
+}
+
+/* Línea de conexión */
 .linea-conexion {
   width: 60%;
   height: 2px;
   background-color: #0077cc;
   margin: 20px auto;
 }
+
+/* Nivel jerárquico */
 .nivel {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-top: 20px;
 }
-
 .persona {
   background-color: #3399ff;
   color: white;
@@ -235,6 +216,137 @@ p {
   border-radius: 6px;
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
+
+
+.cuadro-Ventas {
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.tarjeta-Ventas {
+  display: none;
+  background-color: white;
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.visible {
+  display: block;
+}
+
+.tarjeta-Ventas button {
+  margin-top: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Clase para mostrar tarjetas */
+.visible {
+  display: block;
+}
+
+/* Línea de conexión */
+.linea-conexion {
+  width: 60%;
+  height: 2px;
+  background-color: #0077cc;
+  margin: 20px auto;
+}
+
+/* Nivel jerárquico */
+.nivel {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.persona {
+  background-color: #3399ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* =================== FORMULARIO =================== */
+.formulario-clientes {
+  display: block; /* corregido para que sea visible */
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.formulario-clientes label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.formulario-clientes input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario-clientes button {
+  margin-top: 20px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formulario-clientes button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 600px) {
+  .contenedor-cuadros {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cuadro {
+    width: 90%;
+  }
+  .nivel {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 
  
