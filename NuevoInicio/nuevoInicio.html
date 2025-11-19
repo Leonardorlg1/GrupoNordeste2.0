@@ -22,7 +22,8 @@
       </a>
     </div>
   </header>
-<!-- Texto institucional -->
+
+  <!-- Texto institucional -->
   <p>
     Este proyecto tiene como objetivo integrar conocimientos adquiridos en distintas áreas,
     aplicando estándares de calidad y buenas prácticas institucionales.
@@ -48,11 +49,11 @@
 
       <label for="email">Correo electrónico:</label>
       <input type="email" name="email" id="email"><br>
- <button type="submit">Guardar cliente</button>
+
+      <button type="submit">Guardar cliente</button>
     </form>
   </section>
-
-  <!-- Cuadro Reclamos -->
+<!-- Cuadro Reclamos -->
   <div class="contenedor-cuadros">
     <div class="cuadro">
       <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
@@ -67,7 +68,8 @@
       </a>
     </div>
   </div>
-<!-- Cuadro Carrito -->
+
+  <!-- Cuadro Carrito -->
   <div class="contenedor-centro">
     <div class="cuadro">
       <a href="https://www.gruponordeste.com.ar/" target="_blank">
@@ -79,42 +81,63 @@
   <!-- ORGANIGRAMA INTERACTIVO -->
   <section id="organigrama" class="seccion-organigrama">
     <h2>ORGANIGRAMA</h2>
-
-    <!-- Nodo principal: Gerente -->
+<!-- Nodo principal: Gerente -->
     <div class="contenedor-gerente">
-      <button class="cuadro-gerente" onclick="mostrarTarjeta()">Gerente</button>
+      <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')">Gerente</button>
     </div>
 
-    <!-- Tarjeta oculta -->
-    <div id="tarjetaGerente" class="tarjeta-gerente">
-      <h3>Juan Pérez</h3>
+    <!-- Tarjeta oculta: Gerente -->
+    <div id="tarjetaGerente" class="tarjeta-gerente" style="display:none;">
+      <h3>MARTNEZ CANGA FEDERICO</h3>
       <p><strong>Cargo:</strong> Gerente General</p>
       <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
-      <p><strong>Contacto:</strong> juan.perez@gruponordeste.com</p>
+      <p><strong>Contacto:</strong> fmcanga@gruponordeste.com.ar</p>
     </div>
- <!-- Nivel inferior -->
+
+    <!-- Nivel inferior con botones -->
     <div class="linea-conexion"></div>
     <div class="nivel">
-      <div class="persona">Ventas</div>
-      <div class="persona">Operaciones</div>
-      <div class="persona">Administración</div>
+      <button class="persona" onclick="mostrarTarjeta('tarjetaVentas')">Ventas</button>
+      <button class="persona" onclick="mostrarTarjeta('tarjetaOperaciones')">Operaciones</button>
+      <button class="persona" onclick="mostrarTarjeta('tarjetaAdministracion')">Administración</button>
+    </div>
+
+<!-- Tarjeta oculta: Ventas -->
+    <div id="tarjetaVentas" class="tarjeta-gerente" style="display:none;">
+      <h3>Lagano Alejandro</h3>
+      <p><strong>Cargo:</strong> Jefe de Ventas</p>
+      <p><strong>Funciones:</strong> Gestión comercial, atención a clientes, seguimiento de cotizaciones.</p>
+      <p><strong>Contacto:</strong> comercial@gruponordeste.com.ar</p>
+    </div>
+
+    <!-- Tarjeta oculta: Operaciones -->
+    <div id="tarjetaOperaciones" class="tarjeta-gerente" style="display:none;">
+      <h3>Gómez Natalia</h3>
+      <p><strong>Cargo:</strong> Jefa de Operaciones</p>
+      <p><strong>Funciones:</strong> Coordinación logística, control de procesos, supervisión operativa.</p>
+      <p><strong>Contacto:</strong> operaciones@gruponordeste.com.ar</p>
+    </div>
+
+    <!-- Tarjeta oculta: Administración -->
+    <div id="tarjetaAdministracion" class="tarjeta-gerente" style="display:none;">
+      <h3>Fernández Pablo</h3>
+      <p><strong>Cargo:</strong> Responsable Administrativo</p>
+      <p><strong>Funciones:</strong> Gestión contable, pagos, documentación legal y financiera.</p>
+      <p><strong>Contacto:</strong> administracion@gruponordeste.com.ar</p>
     </div>
   </section>
-
-  <!-- Scripts -->
+<!-- Script único para todas las tarjetas -->
   <script>
-  function mostrarTarjeta() {
-    const tarjeta = document.getElementById("tarjetaGerente");
-    const estaVisible = tarjeta.style.display === "block";
+    function mostrarTarjeta(idTarjeta) {
+      const tarjeta = document.getElementById(idTarjeta);
+      const estaVisible = tarjeta.style.display === "block";
 
-    tarjeta.style.display = estaVisible ? "none" : "block";
+      tarjeta.style.display = estaVisible ? "none" : "block";
 
-    if (!estaVisible) {
-      tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
-
-  }
-}
-</script>
-
+      if (!estaVisible) {
+        tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  </script>
 </body>
 </html>
