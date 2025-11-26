@@ -155,28 +155,37 @@ contenedor-centro {
   margin: 0 auto;
 }
 
-.tarjeta-gerente {
-  opacity: 0;
-  transform: translateY(20px);
-  visibility: idden;
-  pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  background-color: white;
-  border: 2px solid #0077cc;
+/* Estilo base para todas las tarjetas (Gerente, Ventas, etc.) */
+[id^="tarjetaGerente"], [id^="tarjetaVentas"], [id^="tarjetaOperaciones"], [id^="tarjetaAdministracion"] { 
+  background-color: var(--color-tarjeta-bg);
+  border: 2px solid var(--color-btn-organigrama);
   border-radius: 10px;
-  padding: 20px;
-  width: 600px;
-  margin: 20px auto;
+  padding: 0px 20px; /* Padding vertical inicial 0 para que no ocupe espacio */
+  width: 90%;
+  max-width: 600px;
+  margin: 0px auto; /* Margin top/bottom 0px inicial */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
-  position: relative;
+
+  /* Clave para el movimiento suave: */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out, margin 0.7s ease-in-out, padding 0.7s ease-in-out;
+  
+  pointer-events: none;
 }
+/* Estilo cuando la tarjeta tiene la clase 'visible' (NUEVO CÓDIGO) */
 .visible {
-  opacity: 2;
-  transform: translateY(0);
-  visibility: visible;
+  max-height: 500px; /* Suficientemente grande para mostrar todo el contenido */
+  opacity: 1;
   pointer-events: auto;
+  margin: 20px auto; /* Añade los márgenes necesarios cuando es visible */
+  padding: 20px; /* Añade el padding necesario cuando es visible */
 }
+
+/* ... mantén el resto de tu CSS inferior ... */
+
 
 
 .tarjeta-gerente button {
