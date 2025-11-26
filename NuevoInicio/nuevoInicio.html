@@ -60,7 +60,7 @@
 
   <!-- ORGANIGRAMA INTERACTIVO -->
   <section id="organigrama" class="seccion-organigrama">
-    <h2>ORGANIGRAMA</h2>
+    <h2> Estructura Organizacional </h2>
 <!-- Nodo principal: Gerente -->
     <div class="contenedor-gerente">
       <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')" aria-expanded="false" role="button">Gerente</button>
@@ -73,6 +73,22 @@
       <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
       <p><strong>Contacto:</strong> fmcanga@gruponordeste.com.ar</p>
     </div>
+
+<!-- Nuevo contenedor para el Staff (Reporte directo a Gerencia) -->
+    <div class="Auditoria-linea-conexion"></div>
+    <div class="contenedor-Auditoria">
+         <button class="persona" onclick="mostrarTarjeta('tarjetaStaff')">Auditoria</button>
+    </div>
+     <!-- Tarjeta oculta: Staff -->
+    <div id="tarjetaAudditoria" class="tarjeta-Auditoria">
+      <h3>Gonzalez Leonardo</h3>
+      <p><strong>Cargo:</strong> Auditoria interna</p>
+      <p><strong>Funciones:</strong> Coordnar, planidicar autorias internas al sistema de gestion.</p>
+      <p><strong>Contacto:</strong> auditoria@gruponordeste.com.ar</p>
+    </div>
+
+  <!-- Nivel inferior con jefaturas (Ventas, Operaciones, Admin) -->
+    <!-- Esta es la línea de conexión principal a las jefaturas -->
 
     <!-- Nivel inferior con botones -->
     <div class="linea-conexion"></div>
@@ -92,7 +108,7 @@
 
     <!-- Tarjeta oculta: Operaciones -->
     <div id="tarjetaOperaciones" class="tarjeta-Operaciones">
-      <h3>Gómez Natalia</h3>
+      <h3>Maidana Dario</h3>
       <p><strong>Cargo:</strong> Jefa de Operaciones</p>
       <p><strong>Funciones:</strong> Coordinación logística, control de procesos, supervisión operativa.</p>
       <p><strong>Contacto:</strong> operaciones@gruponordeste.com.ar</p>

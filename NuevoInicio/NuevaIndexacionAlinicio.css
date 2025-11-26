@@ -186,7 +186,28 @@ contenedor-centro {
 
 /* ... mantén el resto de tu CSS inferior ... */
 
+/* --- NUEVOS ESTILOS PARA EL STAFF (Soporte a Gerencia) --- */
 
+/* Contenedor del Staff: centralizado */
+.contenedor-Auditoria {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/* Línea de conexión al Staff (más corta que la principal) */
+.Auditoria-linea-conexion {
+  width: 10%; /* Línea corta debajo del gerente */
+  height: 2px;
+  background-color: var(--color-btn-organigrama);
+  margin: 10px auto 0 auto; /* Margen superior 10, inferior 0 */
+}
+/* Línea de conexión principal (la que va a Ventas, Operaciones, Admin) */
+.linea-conexion {
+  width: 60%; 
+  height: 2px;
+  background-color: var(--color-btn-organigrama);
+  margin: 20px auto 20px auto; /* Asegura un buen espacio sobre las jefaturas */
+}
 
 .tarjeta-gerente button {
   margin-top: 10px;
