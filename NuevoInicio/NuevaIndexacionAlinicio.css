@@ -76,7 +76,7 @@ p {
   gap: 20px;
   padding: 0 20px;
 }
-contenedor-centro {
+.contenedor-centro {
   display: flex;
   justify-content: center;
   margin: 20px auto;
@@ -156,7 +156,7 @@ contenedor-centro {
 }
 
 /* Estilo base para todas las tarjetas (Gerente, Ventas, etc.) */
-[id^="tarjetaGerente"], [id^="tarjetaVentas"], [id^="tarjetaOperaciones"], [id^="tarjetaAdministracion"] { 
+[id^="tarjetaGerente"], [id^="tarjetaAuditoria"], [id^="tarjetaVentas"], [id^="tarjetaOperaciones"], [id^="tarjetaAdministracion"] { 
   background-color: var(--color-tarjeta-bg);
   border: 2px solid var(--color-btn-organigrama);
   border-radius: 10px;
@@ -186,15 +186,15 @@ contenedor-centro {
 
 /* ... mantén el resto de tu CSS inferior ... */
 
-/* --- NUEVOS ESTILOS PARA EL STAFF (Soporte a Gerencia) --- */
+/* --- NUEVOS ESTILOS PARA AUDITORIA(Soporte a Gerencia) --- */
 
-/* Contenedor del Staff: centralizado */
+/* Contenedor de Auditoria: centralizado */
 .contenedor-Auditoria {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-/* Línea de conexión al Staff (más corta que la principal) */
+/* Línea de conexión al Auditoria (más corta que la principal) */
 .Auditoria-linea-conexion {
   width: 10%; /* Línea corta debajo del gerente */
   height: 2px;
@@ -257,8 +257,7 @@ contenedor-centro {
   transform: translateY(20px);
   visibility: idden;
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  background-color: white;
+  transition: opacity 0.5s ease, /* Animacion suave al aparecer la tarjeta*/
   border: 2px solid #0077cc;
   border-radius: 10px;
   padding: 20px;
@@ -269,7 +268,7 @@ contenedor-centro {
   position: relative;
 }
 .visible {
-  opacity: 2;
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
@@ -320,7 +319,7 @@ contenedor-centro {
   transform: translateY(20px);
   visibility: idden;
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, /* Animacion suave al aparecer la tarjeta*/
   background-color: white;
   border: 2px solid #0077cc;
   border-radius: 10px;
@@ -332,7 +331,7 @@ contenedor-centro {
   position: relative;
 }
 .visible {
-  opacity: 2;
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
@@ -382,8 +381,7 @@ contenedor-centro {
   transform: translateY(20px);
   visibility: idden;
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  background-color: white;
+  transition: opacity 0.5s ease,/* Animacion suave al aparecer la tarjeta*/
   border: 2px solid #0077cc;
   border-radius: 10px;
   padding: 20px;
@@ -394,7 +392,7 @@ contenedor-centro {
   position: relative;
 }
 .visible {
-  opacity: 2;
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
