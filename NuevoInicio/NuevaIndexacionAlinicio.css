@@ -513,7 +513,7 @@ p {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-* Botón base */
+/* Botón base */
 .persona {
   position: relative;
   background-color: #3399ff;
@@ -563,5 +563,42 @@ p {
     width: 120px;
     height: 120px;
     opacity: 0;
+  }
+}
+.barra-social {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.barra-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.barra-social li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.barra-social li a:hover {
+  color: #00aced;
+}
+@media (max-width: 600px) {
+  .barra-social ul {
+    flex-direction: column; /* pasa de horizontal a vertical */
+    gap: 15px;
+  }
+
+  .barra-social li a {
+    font-size: 20px;
   }
 }
