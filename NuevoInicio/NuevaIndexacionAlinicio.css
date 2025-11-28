@@ -255,7 +255,7 @@ p {
 .tarjeta-Ventas {
   opacity: 0;
   transform: translateY(20px);
-  visibility: idden;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity 0.5s ease, /* Animacion suave al aparecer la tarjeta*/
   border: 2px solid #0077cc;
@@ -317,7 +317,7 @@ p {
 .tarjeta-Operaciones {
   opacity: 0;
   transform: translateY(20px);
-  visibility: idden;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity 0.5s ease, /* Animacion suave al aparecer la tarjeta*/
   background-color: white;
@@ -364,7 +364,7 @@ p {
   cursor: pointer;
 }
 
-.cuadro-Admnstracion {
+.cuadro-Administracion {
   background-color: #0077cc;
   color: white;
   padding: 15px 25px;
@@ -379,7 +379,7 @@ p {
 .tarjeta-Administracion {
   opacity: 0;
   transform: translateY(20px);
-  visibility: idden;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity 0.5s ease,/* Animacion suave al aparecer la tarjeta*/
   border: 2px solid #0077cc;
@@ -399,7 +399,7 @@ p {
 }
 
 
-.tarjeta-Adminitracion button {
+.tarjeta-Administracion button {
   margin-top: 10px;
   background-color: #0077cc;
   color: white;
@@ -424,10 +424,6 @@ p {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   cursor: pointer;
 }
-
-
-
-
 
 
 /* =================== FORMULARIO =================== */
@@ -484,6 +480,88 @@ p {
     gap: 20px;
   }
 }
+//* Contenedor que actúa como ventana */
+.cinta-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
 
+/* Pista que se mueve */
+.cinta {
+  display: flex;
+  gap: 40px;
+  animation: moverCinta 30s linear infinite;
+}
 
- 
+/* Cada cuadro dentro de la cinta */
+.cinta .cuadro {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cinta .cuadro:hover {
+  transform: scale(1.05);
+}
+
+/* Animación infinita */
+@keyframes moverCinta {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+* Botón base */
+.persona {
+  position: relative;
+  background-color: #3399ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  overflow: hidden; /* importante para contener la onda */
+}
+
+.persona {
+  position: relative; /* clave para que la onda se centre en el botón */
+  background-color: #3399ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  overflow: hidden; /* contiene la onda dentro del botón */
+}
+
+.persona::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ondaLuminosa 2s ease-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes ondaLuminosa {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+  }
+100% {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}
