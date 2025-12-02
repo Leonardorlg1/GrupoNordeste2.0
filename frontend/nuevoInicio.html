@@ -95,16 +95,25 @@
     </div>
 
 <!-- Nuevo contenedor para Auditoria (Reporte directo a Gerencia) -->
-    <div class="Auditoria-linea-conexion"></div>
-    <div class="contenedor-Auditoria">
-         <button class="persona" onclick="mostrarTarjeta('tarjetaAuditoria')">Auditoria</button>
-    </div>
+ <div class="nivel-superior">
+  <button class="persona" onclick="mostrarTarjeta('tarjetaAuditoria')">Auditoría</button>
+  <button class="persona" onclick="mostrarTarjeta('tarjetaContabilidad')">Contabilidad</button>
+</div>
+
      <!-- Tarjeta oculta: Auditoria -->
     <div id="tarjetaAuditoria" class="tarjeta-Auditoria">
       <h3>Gonzalez Leonardo</h3>
       <p><strong>Cargo:</strong> Auditoria interna</p>
       <p><strong>Funciones:</strong> Coordinar, planificar autorias internas al sistema de gestion.</p>
       <p><strong>Contacto:</strong> auditoria@gruponordeste.com.ar</p>
+    </div>
+
+     <!-- Tarjeta oculta: contabilidad -->
+    <div id="tarjetaContabilidad" class="tarjeta-Contabilidad">
+      <h3>Novak Adriana</h3>
+      <p><strong>Cargo:</strong> Contadora</p>
+      <p><strong>Funciones:</strong> Registro de operaciones, elaboración de estados financieros y cumplimiento.</p>
+      <p><strong>Contacto:</strong> contabilidad@gruponordeste.com.ar</p>
     </div>
 
   <!-- Nivel inferior con jefaturas (Ventas, Operaciones, Admin) -->
@@ -118,6 +127,7 @@
       <button class="persona" onclick="mostrarTarjeta('tarjetaAdministracion')">Administración</button>
     </div>
 
+
 <!-- Tarjeta oculta: Ventas -->
     <div id="tarjetaVentas" class="tarjeta-Ventas">
       <h3>Lagano Alejandro</h3>
@@ -126,7 +136,7 @@
       <p><strong>Contacto:</strong> comercial@gruponordeste.com.ar</p>
     </div>
 
-    <!-- Tarjeta oculta: Operaciones -->
+    <!-- Tarjeta oculta: Operaciones -->  <!-- Nivel inferior con jefaturas (Ventas, Operaciones, Admin) -->
     <div id="tarjetaOperaciones" class="tarjeta-Operaciones">
       <h3>Maidana Dario</h3>
       <p><strong>Cargo:</strong> Jefa de Operaciones</p>
