@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PROYECTO INTEGRACION</title>
   <link rel="stylesheet" href="NuevaIndexacionAlinicio.css" />
+  <style>
+    /* --- Estilos del modal --- */
+    .modal {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente */
+    }
+
+    .modal-contenido {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-height: 80%;
+      overflow-y: auto; /* Scroll si es muy largo */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+.cerrar {
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .cerrar:hover {
+      color: #000;
+    }
+  </style>
 </head>
 
 <body class="fondo">
@@ -17,21 +52,19 @@
     </div>
     <span>BIENVENIDOS A GRUPO NORDESTE SRL</span>
     <div class="boton-organigrama">
-      <a href="#organigrama">
-        <button aria-label="Ir al organigrama institucional">ORGANIGRAMA</button>
-
-      </a>
+      <!-- Botón para abrir el modal -->
+      <button id="abrirOrganigrama" aria-label="Abrir organigrama institucional">Ver Organigrama</button>
     </div>
   </header>
-<nav class="barra-social">
-  <ul>
-    <li><a href="https://www.facebook.com/gruponordestesrl/" target="_blank">Facebook</a></li>
-    <li><a href="https://www.instagram.com/grupo_nordeste_/" target="_blank">Instagram</a></li>
-    <li><a href="https://www.google.com/maps/place/Grupo+Nordeste+SRL/@-27.384295,-55.9000853,736m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9457be4e8e0d9f15:0x39d5345380780f55!8m2!3d-27.3842998!4d-55.8975104!16s%2Fg%2F1tn029ww?entry=ttu" target="_blank">Ubicación</a></li>
-  </ul>
-</nav>
 
-  <!-- Texto institucional -->
+  <nav class="barra-social">
+    <ul>
+      <li><a href="https://www.facebook.com/gruponordestesrl/" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/grupo_nordeste_/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.google.com/maps/place/Grupo+Nordeste+SRL/" target="_blank">Ubicación</a></li>
+    </ul>
+  </nav>
+<!-- Texto institucional -->
   <p>
     Este proyecto tiene como objetivo integrar conocimientos adquiridos en distintas áreas,
     aplicando estándares de calidad y buenas prácticas institucionales.
@@ -39,132 +72,179 @@
   </p>
   <h2>COMUNICATE CON NOSOTROS</h2>
 
- <div class="cinta-wrapper">
-  <div class="cinta">
-    <!-- Primera tanda -->
-    <div class="cuadro">
-      <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
-        <img src="IMAGENES/RECLAMOS.png" alt="Formulario de reclamos institucional">
-      </a>
+  <div class="cinta-wrapper">
+    <div class="cinta">
+      <!-- Primera tanda -->
+      <div class="cuadro">
+        <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
+          <img src="IMAGENES/RECLAMOS.png" alt="Formulario de reclamos institucional">
+        </a>
+      </div>
+      <div class="cuadro">
+        <a href="https://wa.me/3764387339" target="_blank">
+          <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
+        </a>
+      </div>
+      <div class="cuadro">
+        <a href="frontend/carrito.html" target="_blank">
+          <img src="IMAGENES/carrito/CARRITO.png" alt="Carrito de compras">
+        </a>
+      </div>
+<!-- Segunda tanda -->
+      <div class="cuadro">
+        <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
+          <img src="IMAGENES/RECLAMOS.png" alt="Formulario de reclamos institucional">
+        </a>
+      </div>
+      <div class="cuadro">
+        <a href="https://wa.me/3764387339" target="_blank">
+          <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
+        </a>
+      </div>
+      <div class="cuadro">
+        <a href="carrito.html" target="_blank">
+          <img src="IMAGENES/carrito/CARRITO.png" alt="Carrito de compras">
+        </a>
+      </div>
     </div>
-    <div class="cuadro">
-      <a href="https://wa.me/3764387339" target="_blank">
-        <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
-      </a>
-    </div>
-    <div class="cuadro">
-  <a href="frontend/carrito.html" target="_blank">
-    <img src="IMAGENES/carrito/CARRITO.png" alt="Carrito de compras">
-  </a>
-</div>
-
-    <!-- Segunda tanda (duplicada para efecto continuo) -->
-    <div class="cuadro">
-      <a href="https://forms.office.com/r/6igrhCAdpV" target="_blank">
-        <img src="IMAGENES/RECLAMOS.png" alt="Formulario de reclamos institucional">
-      </a>
-    </div>
-    <div class="cuadro">
-      <a href="https://wa.me/3764387339" target="_blank">
-        <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
-      </a>
-    </div>
-    <div class="cuadro">
-     <a href="carrito.html" target="_blank">
-    <img src="IMAGENES/carrito/CARRITO.png" alt="Carrito de compras">
-</a>
-
-</div>
   </div>
-</div>
+<!-- Ventana modal con organigrama -->
+  <div id="modalOrganigrama" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarOrganigrama" class="cerrar">&times;</span>
+      
+      <!-- ORGANIGRAMA INTERACTIVO -->
+      <section id="organigrama" class="seccion-organigrama">
+        <h2>Estructura Organizacional</h2>
 
-  <!-- ORGANIGRAMA INTERACTIVO -->
-  <section id="organigrama" class="seccion-organigrama">
-    <h2> Estructura Organizacional </h2>
-<!-- Nodo principal: Gerente -->
-    <div class="contenedor-gerente">
-      <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')" aria-expanded="false" role="button">Gerente</button>
+        <!-- Nodo principal: Gerente -->
+        <div class="contenedor-gerente">
+          <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')" aria-expanded="false" role="button">Gerente</button>
+        </div>
+
+        <!-- Tarjeta oculta: Gerente -->
+        <div id="tarjetaGerente" class="tarjeta-gerente">
+          <h3>MARTNEZ CANGA FEDERICO</h3>
+          <p><strong>Cargo:</strong> Gerente General</p>
+          <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
+          <p><strong>Contacto:</strong> fmcanga@gruponordeste.com.ar</p>
+        </div>
+
+        <!-- Nivel superior -->
+        <div class="nivel-superior">
+          <button class="persona" onclick="mostrarTarjeta('tarjetaAuditoria')">Auditoría</button>
+          <button class="persona" onclick="mostrarTarjeta('tarjetaController')">Controller</button>
+          <button class="persona" onclick="mostrarTarjeta('tarjetaContabilidad')">Contabilidad</button>
+        </div>
+ <!-- Tarjeta oculta: Auditoria -->
+        <div id="tarjetaAuditoria" class="tarjeta-Auditoria">
+          <h3>Gonzalez Leonardo</h3>
+          <p><strong>Cargo:</strong> Auditoría interna</p>
+          <p><strong>Funciones:</strong> Coordinar, planificar auditorías internas al sistema de gestión.</p>
+          <p><strong>Contacto:</strong> auditoria@gruponordeste.com.ar</p>
+        </div>
+
+        <!-- Tarjeta oculta: Controller -->
+        <div id="tarjetaController" class="tarjeta-Controller">
+          <h3>Hermosilla Carlos</h3>
+          <p><strong>Cargo:</strong> Controller</p>
+          <p><strong>Funciones:</strong> Control de gestión, análisis de costos, planificación financiera.</p>
+          <p><strong>Contacto:</strong> controller@gruponordeste.com.ar</p>
+        </div>
+
+        <!-- Tarjeta oculta: Contabilidad -->
+        <div id="tarjetaContabilidad" class="tarjeta-Contabilidad">
+          <h3>Novak Adriana</h3>
+          <p><strong>Cargo:</strong> Contadora</p>
+          <p><strong>Funciones:</strong> Registro de operaciones, elaboración de estados financieros y cumplimiento.</p>
+          <p><strong>Contacto:</strong> contabilidad@gruponordeste.com.ar</p>
+        </div>
+
+!-- Nivel inferior -->
+        <div class="linea-conexion"></div>
+        <div class="nivel">
+          <button class="persona" onclick="mostrarTarjeta('tarjetaVentas')">Ventas</button>
+          <button class="persona" onclick="mostrarTarjeta('tarjetaOperaciones')">Operaciones</button>
+          <button class="persona" onclick="mostrarTarjeta('tarjetaAdministracion')">Administración</button>
+        </div>
+
+        <!-- Tarjetas inferiores -->
+        <div id="tarjetaVentas" class="tarjeta-Ventas">
+          <h3>Lagano Alejandro</h3>
+          <p><strong>Cargo:</strong> Jefe de Ventas</p>
+          <p><strong>Funciones:</strong> Gestión comercial, atención a clientes, seguimiento de cotizaciones.</p>
+          <p><strong>Contacto:</strong> comercial@gruponordeste.com.ar</p>
+        </div>
+
+        <div id="tarjetaOperaciones" class="tarjeta-Operaciones">
+          <h3>Maidana Dario</h3>
+          <p><strong>Cargo:</strong> Jefa de Operaciones</p>
+          <p><strong>Funciones:</strong> Coordinación logística, control de procesos, supervisión operativa.</p>
+          <p><strong>Contacto:</strong> operaciones@gruponordeste.com.ar</p>
+        </div>
+
+        <div id="tarjetaAdministracion" class="tarjeta-Administracion">
+               <h3>Vega Marcelo</h3>
+          <p><strong>Cargo:</strong> Coordinador Administrativo</p>
+          <p><strong>Funciones:</strong> Gestión contable, pagos, documentación legal y financiera.</p>
+          <p><strong>Contacto:</strong> administracion@gruponordeste.com.ar</p>
+        </div>
+      </section>
     </div>
+  </div>
 
-    <!-- Tarjeta oculta: Gerente -->
-    <div id="tarjetaGerente" class="tarjeta-gerente">
-      <h3>MARTNEZ CANGA FEDERICO</h3>
-      <p><strong>Cargo:</strong> Gerente General</p>
-      <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
-      <p><strong>Contacto:</strong> fmcanga@gruponordeste.com.ar</p>
-    </div>
+  <script>
+    // Función para mostrar/ocultar tarjetas del organigrama dentro del modal
+    function mostrarTarjeta(idTarjeta) {
+      const tarjeta = document.getElementById(idTarjeta);
+      if (!tarjeta) return;
+      const visible = tarjeta.classList.contains("visible");
+      if (visible) {
+        tarjeta.classList.remove("visible");
+      } else {
+        // Oculta cualquier otra tarjeta visible para evitar superposición
+        document.querySelectorAll(".tarjeta-gerente, .tarjeta-Auditoria, .tarjeta-Controller, .tarjeta-Contabilidad, .tarjeta-Ventas, .tarjeta-Operaciones, .tarjeta-Administracion")
+          .forEach(t => t.classList.remove("visible"));
+        tarjeta.classList.add("visible");
+        tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
 
-<!-- Nuevo contenedor para Auditoria (Reporte directo a Gerencia) -->
- <div class="nivel-superior">
-  <button class="persona" onclick="mostrarTarjeta('tarjetaAuditoria')">Auditoría</button>
-  <button class="persona" onclick="mostrarTarjeta('tarjetaContabilidad')">Contabilidad</button>
-</div>
+ // Lógica del modal (abrir/cerrar)
+    const modal = document.getElementById("modalOrganigrama");
+    const abrir = document.getElementById("abrirOrganigrama");
+    const cerrar = document.getElementById("cerrarOrganigrama");
 
-     <!-- Tarjeta oculta: Auditoria -->
-    <div id="tarjetaAuditoria" class="tarjeta-Auditoria">
-      <h3>Gonzalez Leonardo</h3>
-      <p><strong>Cargo:</strong> Auditoria interna</p>
-      <p><strong>Funciones:</strong> Coordinar, planificar autorias internas al sistema de gestion.</p>
-      <p><strong>Contacto:</strong> auditoria@gruponordeste.com.ar</p>
-    </div>
+    if (abrir) {
+      abrir.addEventListener("click", () => {
+        modal.style.display = "block";
+        // Opcional: bloquear scroll del body mientras el modal está abierto
+        document.body.style.overflow = "hidden";
+      });
+    }
 
-     <!-- Tarjeta oculta: contabilidad -->
-    <div id="tarjetaContabilidad" class="tarjeta-Contabilidad">
-      <h3>Novak Adriana</h3>
-      <p><strong>Cargo:</strong> Contadora</p>
-      <p><strong>Funciones:</strong> Registro de operaciones, elaboración de estados financieros y cumplimiento.</p>
-      <p><strong>Contacto:</strong> contabilidad@gruponordeste.com.ar</p>
-    </div>
+    if (cerrar) {
+      cerrar.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      });
+    }
 
-  <!-- Nivel inferior con jefaturas (Ventas, Operaciones, Admin) -->
-    <!-- Esta es la línea de conexión principal a las jefaturas -->
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
 
-    <!-- Nivel inferior con botones -->
-    <div class="linea-conexion"></div>
-    <div class="nivel">
-      <button class="persona" onclick="mostrarTarjeta('tarjetaVentas')">Ventas</button>
-      <button class="persona" onclick="mostrarTarjeta('tarjetaOperaciones')">Operaciones</button>
-      <button class="persona" onclick="mostrarTarjeta('tarjetaAdministracion')">Administración</button>
-    </div>
-
-
-<!-- Tarjeta oculta: Ventas -->
-    <div id="tarjetaVentas" class="tarjeta-Ventas">
-      <h3>Lagano Alejandro</h3>
-      <p><strong>Cargo:</strong> Jefe de Ventas</p>
-      <p><strong>Funciones:</strong> Gestión comercial, atención a clientes, seguimiento de cotizaciones.</p>
-      <p><strong>Contacto:</strong> comercial@gruponordeste.com.ar</p>
-    </div>
-
-    <!-- Tarjeta oculta: Operaciones -->  <!-- Nivel inferior con jefaturas (Ventas, Operaciones, Admin) -->
-    <div id="tarjetaOperaciones" class="tarjeta-Operaciones">
-      <h3>Maidana Dario</h3>
-      <p><strong>Cargo:</strong> Jefa de Operaciones</p>
-      <p><strong>Funciones:</strong> Coordinación logística, control de procesos, supervisión operativa.</p>
-      <p><strong>Contacto:</strong> operaciones@gruponordeste.com.ar</p>
-    </div>
-
-    <!-- Tarjeta oculta: Administración -->
-    <div id="tarjetaAdministracion" class="tarjeta-Administracion">
-      <h3>Vega Marcelo</h3>
-      <p><strong>Cargo:</strong> Coordinador Administrativo</p>
-      <p><strong>Funciones:</strong> Gestión contable, pagos, documentación legal y financiera.</p>
-      <p><strong>Contacto:</strong> administracion@gruponordeste.com.ar</p>
-    </div>
-  </section>
-<script>
-function mostrarTarjeta(idTarjeta) {
-  const tarjeta = document.getElementById(idTarjeta);
-  const estaVisible = tarjeta.classList.contains("visible");
-
-  if (estaVisible) {
-    tarjeta.classList.remove("visible");
-  } else {
-    tarjeta.classList.add("visible");
-    tarjeta.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-}
-</script>
-
+// Opcional: cerrar con tecla ESC
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display === "block") {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
+  </script>
 </body>
 </html>
+
