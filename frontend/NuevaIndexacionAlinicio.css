@@ -5,7 +5,7 @@
   --color-acento: #d4af37;
   --color-fondo: #f4f4f4;
   --color-texto: grey;
-  --color-titulo: #004080;
+  --color-titulo:rgb(0, 162, 255);
   --color-boton-hover: #005f73;
 }
 
@@ -142,8 +142,14 @@ p {
   background-color: #f0f4f8;
   font-family: Arial, sans-serif;
 }
+.contenedor-gerente {
+  display: flex;
+  flex-direction: column; /* fuerza alineación vertical */
+  align-items: center;    /* centra los botones horizontalmente */
+  gap: 10px;              /* espacio entre botones */
+}
 
-.cuadro-gerente {
+.cuadro-gerente, .cuadro-controller {
   background-color: #0077cc;
   color: white;
   padding: 15px 25px;
@@ -154,9 +160,13 @@ p {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin: 0 auto;
 }
+.cuadro-gerente:hover,
+.cuadro-controller:hover {
+  background-color:rgb(0, 89, 255);
+}
 
 /* Estilo base para todas las tarjetas (Gerente, Ventas, etc.) */
-[id^="tarjetaGerente"], [id^="tarjetaAuditoria"], [id^="tarjetaVentas"], [id^="tarjetaOperaciones"], [id^="tarjetaAdministracion"], [id^="tarjetaContabilidad"], [id^="tarjetaController"], [id^="tarjetaRRHH"] { 
+[id^="tarjetaGerente"], [id^="tarjetaController"], [id^="tarjetaAuditoria"], [id^="tarjetaVentas"], [id^="tarjetaOperaciones"], [id^="tarjetaAdministracion"], [id^="tarjetaContabilidad"], [id^="tarjetaRRHH"] { 
   background-color: var(--color-tarjeta-bg);
   border: 2px solid var(--color-btn-organigrama);
   border-radius: 10px;
@@ -211,29 +221,6 @@ p {
 
 
 /* ... mantén el resto de tu CSS inferior ... */
-
-/* --- NUEVOS ESTILOS PARA controller(Soporte a Gerencia) --- */
-
-/* Contenedor de Auditoria: centralizado */
-.contenedor-Cotroller {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-/* Línea de conexión al Auditoria (más corta que la principal) */
-.Controller-linea-conexion {
-  width: 10%; /* Línea corta debajo del gerente */
-  height: 2px;
-  background-color: var(--color-btn-organigrama);
-  margin: 10px auto 0 auto; /* Margen superior 10, inferior 0 */
-}
-/* Línea de conexión principal (la que va a Ventas, Operaciones, Admin) */
-.linea-conexion {
-  width: 60%; 
-  height: 2px;
-  background-color: var(--color-btn-organigrama);
-  margin: 20px auto 20px auto; /* Asegura un buen espacio sobre las jefaturas */
-}
 
 /*--- NUEVOS ESTILOS PARA CONTABILIDAD(Soporte a Gerencia)---*/
 /* Contenedor de Contabilidad: centralizado */
@@ -473,9 +460,7 @@ p {
   cursor: pointer;
 }
 
-
-
-.cuadro-RRHH {
+.cuadro-rrhh {
   background-color: #0077cc;
   color: white;
   padding: 15px 25px;

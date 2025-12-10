@@ -120,21 +120,29 @@
         <!-- Nodo principal: Gerente -->
         <div class="contenedor-gerente">
           <button class="cuadro-gerente" onclick="mostrarTarjeta('tarjetaGerente')" aria-expanded="false" role="button">Gerente</button>
+          <button class="cuadro-Controller" onclick="mostrarTarjeta('tarjetaController')" aria-expanded="false" role="button">Controller</button>
         </div>
 
         <!-- Tarjeta oculta: Gerente -->
         <div id="tarjetaGerente" class="tarjeta-gerente">
-          <h3>MARTNEZ CANGA FEDERICO</h3>
+          <h3>MARTINEZ CANGA FEDERICO</h3>
           <img src="ImagenTarjetas/Gerente.jpg" alt ="Foto de Federico Martinez Canga" style="width: 150px; height: auto;"/>
                     <p><strong>Cargo:</strong> Gerente General</p>
           <p><strong>Funciones:</strong> Dirección estratégica, supervisión de áreas clave, toma de decisiones.</p>
           <p><strong>Contacto:</strong> fmcanga@gruponordeste.com.ar</p>
         </div>
+        <!-- Tarjeta oculta: Controller -->
+        <div id="tarjetaController" class="tarjeta-Controller">
+                    <img src="ImagenTarjetas/Controller.jpg" alt ="Foto de Hermosilla Carlos" style="width: 150px; height: auto;"/>
+          <h3>Hermosilla Carlos</h3>
+          <p><strong>Cargo:</strong> Controller</p>
+          <p><strong>Funciones:</strong> Control de gestión, análisis de costos, planificación financiera.</p>
+          <p><strong>Contacto:</strong> controller@gruponordeste.com.ar</p>
+        </div>
 
         <!-- Nivel superior -->
         <div class="nivel-superior">
           <button class="persona" onclick="mostrarTarjeta('tarjetaAuditoria')">Auditoría</button>
-          <button class="persona" onclick="mostrarTarjeta('tarjetaController')">Controller</button>
           <button class="persona" onclick="mostrarTarjeta('tarjetaContabilidad')">Contabilidad</button>
         </div>
  <!-- Tarjeta oculta: Auditoria -->
@@ -145,17 +153,7 @@
           <p><strong>Funciones:</strong> Coordinar, planificar auditorías internas al sistema de gestión.</p>
           <p><strong>Contacto:</strong> auditoria@gruponordeste.com.ar</p>
         </div>
-
-        <!-- Tarjeta oculta: Controller -->
-        <div id="tarjetaController" class="tarjeta-Controller">
-                    <img src="ImagenTarjetas/Controller.jpg" alt ="Foto de Hermosilla Carlos" style="width: 150px; height: auto;"/>
-          <h3>Hermosilla Carlos</h3>
-          <p><strong>Cargo:</strong> Controller</p>
-          <p><strong>Funciones:</strong> Control de gestión, análisis de costos, planificación financiera.</p>
-          <p><strong>Contacto:</strong> controller@gruponordeste.com.ar</p>
-        </div>
-
-        <!-- Tarjeta oculta: Contabilidad -->
+  <!-- Tarjeta oculta: Contabilidad -->
         <div id="tarjetaContabilidad" class="tarjeta-Contabilidad">
                     <img src="ImagenTarjetas/Contabilidad-.jpg" alt ="Foto de Novak Adriana" style="width: 150px; height: auto;"/>
           <h3>Novak Adriana</h3>
@@ -173,7 +171,7 @@
            <button class="persona" onclick="mostrarTarjeta('tarjetaRRHH')">RR-HH</button>
         </div>
 
-        <!-- Tarjetas inferiores -->
+<!-- Tarjetas inferiores -->
         <div id="tarjetaVentas" class="tarjeta-Ventas">
                     <img src="ImagenTarjetas/JefeDeVentas.png" alt ="Foto de Lagano Alejandro" style="width: 150px; height: auto;"/>
           <h3>Lagano Alejandro</h3>
