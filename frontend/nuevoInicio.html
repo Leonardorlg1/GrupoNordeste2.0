@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,7 +56,7 @@
       <button id="abrirOrganigrama" aria-label="Abrir organigrama institucional">Ver Organigrama</button>
     </div>
   </header>
-
+<!-- barra de redes sociales-->
   <nav class="barra-social">
     <ul>
       <li><a href="https://www.facebook.com/gruponordestesrl/" target="_blank">Facebook</a></li>
@@ -64,12 +64,31 @@
       <li><a href="https://www.google.com/maps/place/Grupo+Nordeste+SRL/" target="_blank">Ubicación</a></li>
     </ul>
   </nav>
+
+<!-- Botón chevron fijo (debajo de la barra de redes) -->
+<button
+  id="btnInfoEmpresa"
+  class="info-fab info-fab--fixed"
+  type="button"
+  aria-label="Abrir información de Grupo Nordeste"
+  aria-controls="modalEmpresa"
+  aria-expanded="false"
+>
+  <svg class="info-fab__icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
 <!-- Texto institucional -->
-  <p>
-    Este proyecto tiene como objetivo integrar conocimientos adquiridos en distintas áreas,
-    aplicando estándares de calidad y buenas prácticas institucionales.
-    Se trabajará en equipo para desarrollar soluciones que aporten valor a la organización.
-  </p>
+    <p>
+     <p><strong>Quiénes somos:</p>
+      <strong>
+         Somos una organización que desde el 2003, brinda
+      soluciones integrales de limpieza e higiene para empresas e instituciones,
+      combinando Servicios de Higiene Profesional y Distribución
+de productos de limpieza</strong>,
+    </p>
+
   <h2>COMUNICATE CON NOSOTROS</h2>
 
   <div class="cinta-wrapper">
@@ -97,15 +116,11 @@
         </a>
       </div>
       <div class="cuadro">
-        <a href="https://wa.me/3764387339" target="_blank">
+        <a href="https://wa.me/5493764387339" target="_blank">
           <img src="IMAGENES/cotizaciones.jpeg" alt="Contacto institucional por WhatsApp">
         </a>
       </div>
-      <div class="cuadro">
-        <a href="carrito.html" target="_blank">
-          <img src="IMAGENES/carrito/CARRITO.png" alt="Carrito de compras">
-        </a>
-      </div>
+    
     </div>
   </div>
 <!-- Ventana modal con organigrama -->
@@ -259,7 +274,147 @@
         document.body.style.overflow = "";
       }
     });
+    
   </script>
+
+  
+<!-- Modal con información institucional -->
+<div id="modalEmpresa" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalEmpresaTitle" hidden>
+  <div class="modal-contenido" role="document">
+    <button class="cerrar" id="cerrarModalEmpresa" aria-label="Cerrar">×</button>
+
+    <h2 id="modalEmpresaTitle">Grupo Nordeste</h2>
+
+
+
+    <h3>Servicios de Higiene Profesional</h3>
+    <ul>
+      <li><strong>Oficinas y bancos:</strong> espacios limpios y seguros orientados a productividad.</li>
+      <li><strong>Centros comerciales y hoteles:</strong> higiene alineada a estándares de imagen y experiencia del huésped.</li>
+      <li><strong>Salud y educación:</strong> desinfección y control de microorganismos en ambientes de alto tránsito.</li>
+      <li><strong>industrias y gastronomía:</strong> soluciones especializadas para entornos con normativas estrictas.</li>
+    <h3>Distribuciones</h3>
+      <li><strong>Ventas corporativas con asesoramiento técnico <em>compra online</em>  y atención <strong>minorista</strong>
+      </strong> en Posadas. Sectores: educación, hotelería, industrias, sanidad y gastronómico.
+      </li>
+    </ul>
+
+
+<h3>Contacto</h3>
+    <ul>
+      <li><strong>Servicios de higiene:</strong> mailto:servicios@gruponordeste.com.arservicios@gruponordeste.com.ar</a> · tel:+543764387339</a></li>
+      <li><strong>Distribuciones (ventas corporativas):</strong> mailto:pedidos@gruponordeste.com.arpedidos@gruponordeste.com.ar</a> · tel:+543764813820</a></li>
+
+      <li><strong>Dirección:</strong> <a 
+href="mailto:posadas@gruponordeste.com.arcomercialposadas@gruponordeste.com.ar</a> · <a href="https://wa.me/5493764387326 438 7329</a></li>
+      <li><strong>Av. Domingo Cabred 1934, Posadas (Misiones).</strong>  <ttps://www.google.com/maps/place/Grupo+Nordeste+SRL/Cómo llegar</a></li>
+    </ul>
+
+    <p class="small muted">Fuente: sitio oficial (acceso 11‑dic‑2025) y directorios locales para horarios/dirección.</p>
+  </div>
+
 </body>
+
+<script>
+  (function () {
+    const btn = document.getElementById('btnInfoEmpresa');
+    const modal = document.getElementById('modalEmpresa');
+    const dialog = modal?.querySelector('.modal-contenido');
+    const cerrar = document.getElementById('cerrarModalEmpresa');
+
+    // Elementos que pueden recibir foco dentro del modal
+    const focusableSelector = [
+      'a[href]',
+      'area[href]',
+      'input:not([disabled])',
+      'select:not([disabled])',
+
+'textarea:not([disabled])',
+      'button:not([disabled])',
+      'iframe',
+      '[tabindex]:not([tabindex="-1"])',
+      '[contenteditable="true"]'
+    ].join(',');
+
+function trapFocus(e) {
+      const focusables = modal.querySelectorAll(focusableSelector);
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last  = focusables[focusables.length - 1];
+
+// Tab
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+
+ function openModal() {
+      // Mostrar modal
+      modal.hidden = false;
+      modal.style.display = 'block';
+      btn.setAttribute('aria-expanded', 'true');
+
+// Animación
+      dialog.classList.add('is-open');
+
+      // Foco en botón cerrar
+      cerrar.focus();
+
+// Bloquear scroll del body (opcional)
+      document.body.style.overflow = 'hidden';
+
+      // Listeners de cierre y accesibilidad
+      document.addEventListener('keydown', onKeydown);
+      modal.addEventListener('keydown', trapFocus);
+    }
+
+function closeModal() {
+      // Ocultar modal
+      modal.hidden = true;
+      modal.style.display = 'none';
+      btn.setAttribute('aria-expanded', 'false');
+
+// Quitar animación
+      dialog.classList.remove('is-open');
+
+      // Devolver foco al botón
+      btn.focus();
+
+      // Restaurar scroll
+      document.body.style.overflow = '';
+
+// Remover listeners
+      document.removeEventListener('keydown', onKeydown);
+      modal.removeEventListener('keydown', trapFocus);
+    }
+
+function onKeydown(e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    }
+
+    // Abrir / Cerrar
+    btn.addEventListener('click', openModal);
+    cerrar.addEventListener('click', closeModal);
+
+    // Cerrar haciendo clic en el overlay
+
+
+modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  })();
+</script>
+
+
+
+
+
 </html>
 

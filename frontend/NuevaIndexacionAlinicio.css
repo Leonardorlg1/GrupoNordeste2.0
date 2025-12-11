@@ -724,3 +724,92 @@ p {
   margin: 20px 5% 0 5%;
   gap: 40px;
 }
+
+/* Aspecto del botón */
+.info-fab {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1f2937; /* currentColor para el SVG */
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.info-fab:hover {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+}
+.info-fab:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+.info-fab__icon { display: block; }
+
+/* Posición fija: derecha y centro vertical */
+.info-fab--fixed {
+  position: fixed;
+  right: 16px;      /* ajustá el margen lateral */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;   /* alto para estar por encima de nav/header */
+}
+
+/* IMPORTANTE: si querés que SIEMPRE quede centrado, evita moverlo en móviles */
+@media (max-width: 600px) {
+  /* NO cambiamos top/bottom aquí para mantener el centro */
+}
+
+/* Overlay del modal */
+.modal {
+  display: none;            /* Oculto por defecto (se activa vía JS) */
+  position: fixed; inset: 0;
+  z-index: 1000;            /* Por encima del contenido y del botón */
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Caja del modal */
+.modal-contenido {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: min(90%, 900px);
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Botón cerrar */
+.cerrar {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  background: transparent;
+  border: 0;
+}
+.cerrar:hover { color: #000; }
+.small { font-size: .9rem; }
+.muted { color: #666; }
+
+/* Animación suave de entrada (desde la derecha) */
+@keyframes slideInRight {
+  from { transform: translateX(24px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* Se aplica cuando abrimos el modal */
+.modal-contenido.is-open {
+  animation: slideInRight .25s ease-out both;
+}
+
+/* Respeta preferencias del usuario */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
