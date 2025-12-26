@@ -254,10 +254,6 @@ p {
   cursor: pointer;
 }
 
-/* Clase para mostrar tarjetas */
-.visible {
-  display: block;
-}
 
 /* Línea de conexión */
 .linea-conexion {
@@ -320,10 +316,6 @@ p {
   cursor: pointer;
 }
 
-/* Clase para mostrar tarjetas */
-.visible {
-  display: block;
-}
 
 
 .persona {
@@ -383,10 +375,6 @@ p {
   cursor: pointer;
 }
 
-/* Clase para mostrar tarjetas */
-.visible {
-  display: block;
-}
 
 
 .persona {
@@ -444,11 +432,6 @@ p {
   cursor: pointer;
 }
 
-/* Clase para mostrar tarjetas */
-.visible {
-  display: block;
-}
-
 
 .persona {
   background-color: #3399ff;
@@ -503,11 +486,6 @@ p {
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-/* Clase para mostrar tarjetas */
-.visible {
-  display: block;
 }
 
 
@@ -578,7 +556,7 @@ p {
     gap: 20px;
   }
 }
-//* Contenedor que actúa como ventana */
+/* Contenedor que actúa como ventana */
 .cinta-wrapper {
   width: 100%;
   overflow: hidden;
@@ -924,4 +902,71 @@ p {
 .proveedor-logo:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+/* ------ Secciones genéricas y Proveedores ------ */
+html { 
+  scroll-behavior: smooth;       /* scroll suave para enlaces #proveedores */
+}
+
+html, body { 
+  height: auto; 
+  overflow-y: auto;              /* asegura que haya scroll vertical */
+}
+
+/* Estilo base para secciones (coincide con tu HTML) */
+.seccion {
+  padding: 60px 16px;
+  border-top: 1px solid #e5eaf0;
+  background: #ffffff;
+}
+
+.seccion.alt {
+  background: #f7f9fc;           /* alterna color para contraste */
+}
+
+/* Contenedor centrado */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Lista de logos de proveedores */
+.logos {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logos img {
+  display: block;
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.logos img:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.15));
+}
+
+/* Si tu header/nav es fijo, esto evita que el ancla quede tapada */
+section { 
+  scroll-margin-top: 80px;       /* ajustá 60–100px según la altura real del header */
+}
+
+/* ------ Estado del modal para no bloquear el scroll ------ */
+.modal { 
+  display: none;                 /* oculto por defecto */
+}
+.modal.is-open { 
+  display: block;                /* visible cuando se abre (vía JS) */
+}
+body.modal-open { 
+  overflow: hidden;              /* desactiva scroll del fondo solo con modal abierto */
 }
